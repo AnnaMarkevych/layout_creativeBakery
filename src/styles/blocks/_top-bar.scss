@@ -1,0 +1,11 @@
+.top-bar {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  border: 1px solid red;
+  align-items: center;
+
+  &__logo {
+    height: 24.16px;
+  }
+}

@@ -1,0 +1,37 @@
+.theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  padding: 5px 20px;
+
+  &__title {
+    &--margin {
+      margin-right: 10px;
+    }
+  }
+
+  &__switcher {
+    width: 45px;
+    background-color: #ad9a9ab0;
+    border-radius: 20px;
+    padding: 5px;
+
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--bg-page);
+      width: 50%;
+      padding-bottom: 50%;
+      border-radius: 50%;
+
+      transition: transform .3s;
+    }
+  }
+
+}
+
+
+.page--theme--blue .theme__switcher::after {
+  transform: translateX(100%);
+}
