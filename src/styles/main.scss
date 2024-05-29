@@ -1,12 +1,13 @@
 @import 'utils';
 @import 'fonts';
 @import 'typography';
-
 @import 'blocks/header';
 @import 'blocks/top-bar';
 @import 'blocks/icon';
 @import 'blocks/nav';
 @import 'blocks/theme-switcher';
+@import 'blocks/page';
+@import 'blocks/aside';
 
 .page {
   --bg-page: #FFEEFC;
@@ -24,13 +25,22 @@
   &__body {
     margin: 0;
   }
+
+  &__menu {
+    @include on-desktop-md {
+      display: none;
+    }
+  }
 }
 
 .page--theme--blue {
   --bg-page: #EEF7FF;
 }
 
+.container {
+  @include content-padding-inline;
 
+}
 
 ul {
   list-style: none;
@@ -41,4 +51,14 @@ ul {
 a {
   text-decoration: none;
   color: $main-color-text;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.menu__bottom {
+  @include on-desktop-md {
+    display: none;
+  }
 }

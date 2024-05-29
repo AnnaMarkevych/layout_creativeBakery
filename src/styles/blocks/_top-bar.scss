@@ -2,10 +2,18 @@
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  border: 1px solid red;
   align-items: center;
+
+  @include on-desktop-md {
+    padding: 28px 32px;
+  }
 
   &__logo {
     height: 24.16px;
+    transition: transform .2s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

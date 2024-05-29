@@ -22,3 +22,16 @@
     @content;
   }
 }
+
+@mixin content-padding-inline() {
+  padding-inline: 16px;
+
+  @include on-tablet {
+    padding-inline: 44px;
+  }
+
+  @include on-desktop-xl {
+    padding-inline: 124px;
+  }
+}
+
